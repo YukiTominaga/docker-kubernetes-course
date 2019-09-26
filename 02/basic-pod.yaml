@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app: web
+spec:
+  containers:
+    - name: nginx
+      image: nginx:stable-alpine
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-no-label
+spec:
+  containers:
+    - name: nginx
+      image: nginx:stable-alpine

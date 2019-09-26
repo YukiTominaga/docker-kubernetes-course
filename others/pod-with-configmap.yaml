@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-with-config
+  labels:
+    app: web
+spec:
+  containers:
+    - name: nginx
+      image: nginx:stable-alpine
+      envFrom:
+        - configMapRef:
+            name: env-value
+      env:
+        - name: ENV
+          value: "HELLO WORLD"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-value
+data:
+  ENV: "Hello World"
