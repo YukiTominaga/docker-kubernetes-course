@@ -56,9 +56,9 @@ Nginxサーバのコンテナを起動するPodに直接トラフィックを送
 kubectlコマンドには、Podへのポートフォワーディングを行うコマンド`kubectl port-forward`があり、`kubectl port-forward <Pod名> ローカルポート番号:Podのポート番号`のように使います。
 
 ```sh
-$ kubectl port-forward nginx 8080:80
-Forwarding from 127.0.0.1:8080 -> 80
-Forwarding from [::1]:8080 -> 80
+$ kubectl port-forward nginx 8081:80
+Forwarding from 127.0.0.1:8081 -> 80
+Forwarding from [::1]:8081 -> 80
 ```
 
 起動中のPodの定義を少しだけ変更したい場合、わざわざマニフェストファイルを書き直して`kubectl apply`をするのは面倒です。
