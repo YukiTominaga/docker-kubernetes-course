@@ -10,9 +10,9 @@ NAME       TYPE           CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
 nginx-lb   LoadBalancer   10.28.0.78   <pending>     80:32085/TCP   10s
 ```
 
-ここで、EXTERNAL-IPが<pending>となっているはずです。
+ここで、EXTERNAL-IPが"pending"となっているはずです。
 これは、GCPのロードバランサが外部IPアドレスを確保している最中であることを意味しています。
-ロードバランサが外部IPアドレスの確保に成功すると、<pending>部分が次のように書き換わります。
+ロードバランサが外部IPアドレスの確保に成功すると、"pending"部分が次のように書き換わります。
 
 ```sh
 $ kubectl get svc nginx-lb -w
