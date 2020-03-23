@@ -7,7 +7,7 @@ $ docker --version
 Docker version 19.03.2, build 6a30dfc
 ```
 
-DockerHubで公開されているコンテナイメージは自由に使うことができます。
+[DockerHub](https://hub.docker.com/)で公開されているコンテナイメージは自由に使うことができます。
 ここでは、WebサーバであるnginxのうちalpineOSで起動するものをダウンロードしましょう。
 このようなコンテナイメージが保存されている場所を、`レジストリ`と呼びます。
 DockerHubが最も有名ですが、例えばGCPにはGoogle Container Registryというサービスがあり、自分たちのコンテナをプライベートに保存しておくことができます。
