@@ -28,11 +28,10 @@ NAME            NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED
 allow-nodeport  default  INGRESS    1000      tcp:30000-32767        False
 ```
 
-これで始めてNodePortへのトラフィックが許可されます。
+こうすることでNodePortへのトラフィックが許可されます。
 
 ```sh
 $ curl -i 34.84.223.243:30001
 HTTP/1.1 200 OK
 Server: nginx/1.16.1
 ```
-
