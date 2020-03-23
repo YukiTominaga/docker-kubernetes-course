@@ -84,7 +84,7 @@ events                            ev                                          tr
 ```
 
 それぞれのリソースにどのような定義が書けてどのような意味があるのか、という疑問がそのうち出てきます。
-どれだけKubernetesを長く続けていても、全ての定義を覚えるのはなかなか難しいので`kubectl explain`コマンドで調べることができます。
+どれだけKubernetesを長く続けていても、全ての定義を覚えるのはなかなか難しいので`kubectl explain`コマンドで調べられることを覚えておきましょう。
 
 ```sh
 $ kubectl explain Pod.spec
