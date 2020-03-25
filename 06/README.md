@@ -66,11 +66,12 @@ probe   0/1     Running   0          3m52s
 $ curl -i 34.84.223.243:30002
 ```
 
-今度はレスポンスが返ってこないはずです。これは、readinessProbeがステータスがREADYではないPodにトラフィックを送信しないようにする振る舞いを示しています。
+今度はレスポンスが返ってこないはずです。これは、readinessProbeがREADYではないPodにトラフィックを送信しないようにする振る舞いを示しています。
+
 ところで、何らかの原因でPodが正常に処理を実行できないにもかかわらず、そのPodが起動しっぱなしでは困ります。
-Podに障害が発生した際にプロセスを再起動させるものがreadinessProbeです。
+Podに障害が発生した際にプロセスを再起動させるものがlivenessProbeです。
 probe PodとServiceを削除して、`probe.yaml`のコメントアウトを外してから再度デプロイしてください。
-マニフェストファイルから作成したリソースを削除するには、`kubectl delete`が効果的です。
+マニフェストファイルから作成したリソースを削除するには、`kubectl delete -f`を実行すると良いでしょう。
 
 ```sh
 $ kubectl delete -f probe.yaml
