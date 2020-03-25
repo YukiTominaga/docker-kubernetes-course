@@ -1,7 +1,6 @@
 # NodePort
 
-今度はNodePortです。
-まずはNodePort Serviceをマニフェストファイル`nginx-nodeport.yaml`から作成しましょう。
+まずは`type: NodePort`のServiceをマニフェストファイル`nginx-nodeport.yaml`から作成しましょう。
 
 NodePortにトラフィックを送信するためには、もちろんNodeのIPアドレスが必要です。
 Kubernetesクラスタを構成するNodeのIPアドレスは`kubectl get nodes`で調べられます。
