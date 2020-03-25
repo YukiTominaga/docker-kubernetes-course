@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: vegeta
+  labels:
+    app: vegeta
+spec:
+  parallelism: 30
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: cloud.google.com/gke-nodepool
+                    operator: In
+                    values:
+                      - default-pool
+      restartPolicy: Never
+      containers:
+        - name: vegeta
+          image: peterevans/vegeta
+          command: ["sh", "-c"]
+          args: ['echo "GET http://nginx" | vegeta attack -rate=1000 -duration=120s -header "Content-Cache: no-cache" | vegeta report']
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1.5Gi
