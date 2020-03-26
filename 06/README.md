@@ -1,3 +1,6 @@
+# 公開コンテナ名
+`gcr.io/ca-tominaga-test/healthy-error-server`
+
 # readinessProbeとlivenessProbe
 
 本番環境でコンテナを起動し続けるためには、この2つの設定が必要不可欠です。
