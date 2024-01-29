@@ -41,7 +41,7 @@ nginx   1/1     Running   0          7m30s
 `kubectl exec`コマンドでログインができます。
 
 ```sh
-$ kubectl exec -it nginx ash
+$ kubectl exec -it nginx -- ash
 / # cat /etc/hosts
 # Kubernetes-managed hosts file.
 127.0.0.1	localhost
