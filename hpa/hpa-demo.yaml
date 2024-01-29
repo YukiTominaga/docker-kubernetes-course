@@ -11,15 +11,6 @@ spec:
       labels:
         app: nginx
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: cloud.google.com/gke-nodepool
-                    operator: In
-                    values:
-                      - nginx-pool
       containers:
         - name: nginx
           image: nginx:stable-alpine
