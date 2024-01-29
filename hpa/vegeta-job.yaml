@@ -5,18 +5,9 @@ metadata:
   labels:
     app: vegeta
 spec:
-  parallelism: 30
+  parallelism: 10
   template:
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: cloud.google.com/gke-nodepool
-                    operator: In
-                    values:
-                      - default-pool
       restartPolicy: Never
       containers:
         - name: vegeta
