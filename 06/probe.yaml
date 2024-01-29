@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: probe
-      image: YOUR_BUILD_IMAGE # Fixme
+      image: asia-northeast1-docker.pkg.dev/j-techno-seminar/docker/probe:latest
       readinessProbe:
         initialDelaySeconds: 10
         periodSeconds: 30
