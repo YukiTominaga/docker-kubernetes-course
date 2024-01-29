@@ -4,7 +4,7 @@
 
 ```sh
 $ docker --version
-Docker version 19.03.2, build 6a30dfc
+Docker version 24.0.7, build afdd53b
 ```
 
 [DockerHub](https://hub.docker.com/)で公開されているコンテナイメージは自由に使うことができます。
