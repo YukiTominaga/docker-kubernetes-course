@@ -38,5 +38,3 @@ OK: 7 MiB in 18 packages
 HTTP/1.1 200 OK
 Server: nginx/1.16.1
 ```
-
-さて、なぜ`nginx-clusterip`というホスト名が解決できたのでしょうか?
