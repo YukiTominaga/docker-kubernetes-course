@@ -9,7 +9,7 @@ ClusterIPはクラスタの内部に公開するServiceなので、このまま�
 このようなケースでわざわざマニフェストファイルを書くのはめんどうなので、`kubectl run`コマンドで直接Podを作成しましょう。
 
 ```sh
-$ kubectl run -it --generator=run-pod/v1 alpine --image=alpine ash
+$ kubectl run -it alpine --image=alpine -- ash
 If you don't see a command prompt, try pressing enter.
 / #
 ```
